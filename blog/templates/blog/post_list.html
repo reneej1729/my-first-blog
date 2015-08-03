@@ -1,7 +1,17 @@
 <html>
 	<head>
-		<title>Renee's Blog</title>
+		<title>Renee's Projects</title>
 	</head>
-	<p>Hi there!</p>
-	<p>It works!</p>
+	<h1>
+		Renee's Projects
+	</h1>
+	<div>
+		{% for post in posts%}
+			<div>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaks }}</p>
+				<p>published: {{ post.published_date }}</p>
+			</div>
+		{% endfor %}
+	</div>
 </html>
